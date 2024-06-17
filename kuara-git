@@ -1,0 +1,67 @@
+#!/bin/bash
+
+repo=$1
+own=$2
+Version=v0.0.1
+
+case $repo in
+    v)
+	echo "Version" $Version
+	exit
+        ;;
+    MulBX)
+        echo "Downloading Repo: $repo"
+	cd $HOME 
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
+        ;;
+    dotfiles)
+        echo "Downloading Repo: $repo"
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
+	;;
+    yay)
+	if [ $own = "-Nm" ];
+	then
+		echo "Downloading Repo: $repo"
+		git clone https://aur.archlinux.org/$repo.git
+		exit
+	else
+		echo "Package Not Owned By Logan Kaval!"
+		echo "Must Use '-Nm' Syntax at the End to Download"
+		exit
+	fi
+	;;
+    Jaiyk)
+	echo "Downloading Repo: $repo"
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
+	;;
+    OpenArchive)
+	echo "Downloading Repo: $repo"
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
+	;;
+    Grub-Arch-Install)
+	echo "Downloading Repo: $repo"
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
+	;;
+    mx-live-usb-maker)
+        if [ $own = "-Nm" ];
+	then
+		echo "Downloading Repo: $repo"
+		git clone https://github.com/MX-Linux/$repo.git
+		exit
+	else
+		echo "Package Not Owned By Logan Kaval!"
+		echo "Must USe '-Nm' Syntax at the End to Download"
+		exit
+	fi
+	;;
+    *)
+	
+	echo "Syntax Error: Nothing Downloaded"
+
+	;;
+esac
