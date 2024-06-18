@@ -57,6 +57,8 @@ case $repo in
 		echo "Package Not Owned By Logan Kaval!"
 		echo "Must Use '-Nm' Syntax at the End to Download"
 		exit
+	fi 
+	    ;;
 	linutil)
 	if [ $own = "-Nm" ];
 	then 
@@ -68,6 +70,11 @@ case $repo in
 		echo "Must Use '-Nm' Syntax at the End to Download"
 		exit
 	fi
+	    ;;
+	Kuara)
+	echo "Downloading Repo: $repo"
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
 	    ;;
     *)
 	
