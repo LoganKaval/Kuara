@@ -1,0 +1,22 @@
+#!/bin/bash
+
+act=$1
+
+
+case $act in
+    load)
+    cp kuara /bin/kuara
+    cp kuara /sbin/kuara
+    exit
+        ;;
+    unload)
+    rm /bin/kuara
+    rm /sbin/kuara
+    exit
+        ;;
+    *)
+    echo "No Action Promoted: Nothing Changed"
+    ;;
+esac
+
+
