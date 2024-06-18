@@ -75,10 +75,42 @@ case $repo in
 	echo "Downloading Repo: $repo"
 	git clone https://github.com/LoganKaval/$repo.git
 	exit
-	    ;;
-    *)
+	    ;;    *)
 	
 	echo "Syntax Error: Nothing Downloaded"
 
 	;;
 esac
+
+if [[ $repo = *:* ]];
+then 
+    echo "Downloading Custom GitHub Repo: ${repo//:}"
+	git clone https://github.com/${repo//:}
+	exit
+
+else
+    echo "" >> $NULL
+    exit
+fi
+
+if [[ $repo = *::* ]];
+then
+    echo "Downloading Custom HTTPS Repo: ${repo//::};"
+	git clone https://${repo//::};
+	exit
+else
+
+    echo "" >> $NULL
+    exit
+fi
+
+if [[ $repo = *:::* ]];
+then
+    echo "Downloading Custom HTTP Repo: ${repo//:::};"
+	git clone http://${repo//:::};
+	exit
+else
+
+    echo "" >> $NULL
+    exit
+fi

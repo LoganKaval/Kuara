@@ -18,5 +18,3 @@ case $act in
     echo "No Action Promoted: Nothing Changed"
     ;;
 esac
-
-
