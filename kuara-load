@@ -2,13 +2,10 @@
 
 act=$1
 
-if [ whoami = "root" ];
-then
-    echo "Starting"
-else
-    echo "Root Needed"
-    exit
-fi 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
 
 case $act in
     load)
