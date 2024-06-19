@@ -75,7 +75,13 @@ case $repo in
 	echo "Downloading Repo: $repo"
 	git clone https://github.com/LoganKaval/$repo.git
 	exit
-	    ;;    *)
+	    ;;
+	miniMint)
+	echo "Downloading Repo: $repo"
+	git clone https://github.com/LoganKaval/$repo.git
+	exit
+	    ;;    
+		*)
 	
 	echo "Syntax Error: Nothing Downloaded"
 
