@@ -2,7 +2,7 @@
 
 repo=$1
 own=$2
-Version=v0.0.1
+Version=v0.0.2
 
 case $repo in
     v)
