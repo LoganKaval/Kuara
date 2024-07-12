@@ -2,7 +2,7 @@
 
 repo=$1
 own=$2
-Version=v0.0.2
+Version=07122024
 
 case $repo in
     v)
@@ -11,75 +11,80 @@ case $repo in
         ;;
     MulBX)
         echo "Downloading Repo: $repo"
-	cd $HOME 
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    cd $HOME 
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
         ;;
     dotfiles)
         echo "Downloading Repo: $repo"
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
 	    ;;
     yay)
-	if [ $own = "-Nm" ];
-	then
-		echo "Downloading Repo: $repo"
-		git clone https://aur.archlinux.org/$repo.git
-		exit
-	else
-		echo "Package Not Owned By Logan Kaval!"
-		echo "Must Use '-Nm' Syntax at the End to Download"
-		exit
-	fi
+	    if [ $own = "-Nm" ];
+	    then
+		    echo "Downloading Repo: $repo"
+		    git clone https://aur.archlinux.org/$repo.git
+		    exit
+	    else
+	    	echo "Package Not Owned By Logan Kaval!"
+		    echo "Must Use '-Nm' Syntax at the End to Download"
+		    exit
+	    fi
 	    ;;
     Jaiyk)
-	echo "Downloading Repo: $repo"
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    echo "Downloading Repo: $repo"
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
 	    ;;
     OpenArchive)
-	echo "Downloading Repo: $repo"
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    echo "Downloading Repo: $repo"
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
 	    ;;
     Grub-Arch-Install)
-	echo "Downloading Repo: $repo"
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    echo "Downloading Repo: $repo"
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
 	    ;;
     mx-live-usb-maker)
-    if [ $own = "-Nm" ];
-	then
-		echo "Downloading Repo: $repo"
-		git clone https://github.com/MX-Linux/$repo.git
-		exit
-	else
-		echo "Package Not Owned By Logan Kaval!"
-		echo "Must Use '-Nm' Syntax at the End to Download"
-		exit
-	fi 
+        if [ $own = "-Nm" ];
+	    then
+	    	echo "Downloading Repo: $repo"
+		    git clone https://github.com/MX-Linux/$repo.git
+		    exit
+	    else
+		    echo "Package Not Owned By Logan Kaval!"
+		    echo "Must Use '-Nm' Syntax at the End to Download"
+		    exit
+	    fi 
 	    ;;
 	linutil)
-	if [ $own = "-Nm" ];
-	then 
-	    echo "Downloading Repo: $repo"
-		git clone https://github.com/ChrisTitusTech/$repo.git
-		exit
-	else
-	    echo "Package Not Owned By Logan Kaval!"
-		echo "Must Use '-Nm' Syntax at the End to Download"
-		exit
-	fi
+	    if [ $own = "-Nm" ];
+	    then 
+	        echo "Downloading Repo: $repo"
+		    git clone https://github.com/ChrisTitusTech/$repo.git
+		    exit
+	    else
+	        echo "Package Not Owned By Logan Kaval!"
+		    echo "Must Use '-Nm' Syntax at the End to Download"
+		    exit
+	    fi
 	    ;;
+    3RB0RU)
+        echo "Downloading Repo: $repo"
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
+        ;;
 	Kuara)
-	echo "Downloading Repo: $repo"
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    echo "Downloading Repo: $repo"
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
 	    ;;
 	miniMint)
-	echo "Downloading Repo: $repo"
-	git clone https://github.com/LoganKaval/$repo.git
-	exit
+	    echo "Downloading Repo: $repo"
+	    git clone https://github.com/LoganKaval/$repo.git
+	    exit
 	    ;;    
 		*)
 	
@@ -95,7 +100,7 @@ then
 	exit
 
 else
-    echo "" >> $NULL
+    echo "" > /dev/null
     exit
 fi
 
@@ -106,7 +111,7 @@ then
 	exit
 else
 
-    echo "" >> $NULL
+    echo "" > /dev/null
     exit
 fi
 
@@ -117,6 +122,6 @@ then
 	exit
 else
 
-    echo "" >> $NULL
+    echo "" > /dev/null
     exit
 fi
